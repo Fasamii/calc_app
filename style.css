@@ -75,8 +75,8 @@ body {
     align-items: center;
     transition: 100ms;
 }
-.calc_button:is(:hover, :focus),
-.calc_button_r:is(:hover, :focus) {
+.calc_button:hover,
+.calc_button_r:hover {
     transform: skew(2deg,2deg);
     background-color: #ffaaba21;
 }
