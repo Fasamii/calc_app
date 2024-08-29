@@ -21,7 +21,7 @@ body {
     border: 2px solid;
     border-radius: 18px;
     display: grid;
-    grid-template: 1fr 4fr / 1fr;
+    grid-template: 20% 80% / 1fr;
     transition: 100ms;
 }
 .calculator__panel {
@@ -95,7 +95,7 @@ body {
 }
 .calc_pan {
     grid-column: 2 / 3;
-    height: 80px;
+    max-height: 100%;
     color: #f0ffff;
     font-family: "Nanum Gothic Coding", monospace;
     font-size: 4rem;

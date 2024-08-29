@@ -22,9 +22,9 @@ function addToCalculation(element){
     if(['X',':','+','-'].includes(element)){
         const last = calculation.slice(-1);
         if((!['X',':','+','-'].includes(last))&&(calculation.length > 0 || element == '-')){
-            calculation += element;           
+            calculation += element;
         }
     }else{
-        calculation += element;     
+        calculation += element;
     }
-}   
+}
