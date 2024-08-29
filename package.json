@@ -1,0 +1,15 @@
+{
+  "name": "calc_app",
+  "version": "1.0.0",
+  "description": "calculator app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fasamii",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
