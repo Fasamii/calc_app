@@ -8,8 +8,12 @@ document.getElementById('clear').addEventListener('click', () => {
 });
 calculate.addEventListener('click', () => {
     if(calculation.length > 0){
-        calculation = String(eval(calculation.replaceAll('X','*').replaceAll(':','/')))
-        panel.textContent = calculation;
+        try{
+            calculation = String(eval(calculation.replaceAll('X','*').replaceAll(':','/')))
+            panel.textContent = calculation;
+        }catch(e){
+            panel.textContent = 'wrong equation';
+        }
     }
 })
 buttons.forEach((element) => {
