@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 *, *::before, *::after {box-sizing: border-box; margin: 0; padding: 0;}
 html, body {    
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 body {
     background: linear-gradient(20deg, rgb(129, 58, 0),rgb(55, 0, 128));
@@ -75,7 +75,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 100ms;
+    transition: 200ms;
 }
 .calc_button:hover,
 .calc_button_r:hover,
@@ -124,28 +124,32 @@ body {
 /* RESPONSIVE */
 @media screen and (min-width: 700px) {
     .calc_button:hover,
-    .calc_button_r:hover {
+    .calc_button_r:hover,
+    .calc_button_c:hover {
         transform: skew(1deg,1deg);
     }
     
     .calc_button:active,
-    .calc_button_r:active {
+    .calc_button_r:active,
+    .calc_button_c:active {
         transform: skew(-1deg,-1deg);
     }
 }
 @media screen and (min-width: 1600px) {
     .calc_button:hover,
-    .calc_button_r:hover {
+    .calc_button_r:hover,
+    .calc_button_c:hover {
         transform: skew(0.4deg,0.4deg);
     }
     
     .calc_button:active,
-    .calc_button_r:active {
+    .calc_button_r:active,
+    .calc_button_c:active {
         transform: skew(-0.4deg,-0.4deg);
     }
 }
-@media screen and (min-height: 600px) {
+@media screen and (min-height: 600px) and (min-width: 800px) {
     .calculator {
-        height: fit-content;
+        height: 60%;
     }
 }
