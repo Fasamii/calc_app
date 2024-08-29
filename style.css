@@ -16,12 +16,13 @@ body {
 /* CALCULATOR */
 .calculator {
     width: 90%;
-    height: fit-content;
+    height: 90%;
     background: #0004;
     border: 2px solid;
     border-radius: 18px;
     display: grid;
     grid-template: 1fr 4fr / 1fr;
+    transition: 100ms;
 }
 .calculator__panel {
     grid-row: 1 / 2;
@@ -63,7 +64,8 @@ body {
 #calc__buton_t {grid-area: ml;}
 #calc__buton_d {grid-area: dv;}
 .calc_button,
-.calc_button_r {
+.calc_button_r,
+.calc_button_c {
     border-radius: 4px;
     border: 1px solid #ffffff5e;
     background-color: #200d1165;
@@ -76,13 +78,19 @@ body {
     transition: 100ms;
 }
 .calc_button:hover,
-.calc_button_r:hover {
+.calc_button_r:hover,
+.calc_button_c:hover {
     transform: skew(2deg,2deg);
-    background-color: #ffaaba21;
+    background-color: #00000056;
 }
-.calc_button:active,
-.calc_button_r:active {
+.calc_button:active {
     transform: skew(-2deg,-2deg);
+}
+.calc_button_r:active {
+    background-color: #00ff625e;
+}
+.calc_button_c:active {
+    background-color: #57000091;
 }
 .calc_pan {
     grid-column: 2 / 3;
@@ -112,4 +120,32 @@ body {
     width: 100%;
     border-radius: 12px 4px 4px 4px;
     margin-right: 8px;
+}
+/* RESPONSIVE */
+@media screen and (min-width: 700px) {
+    .calc_button:hover,
+    .calc_button_r:hover {
+        transform: skew(1deg,1deg);
+    }
+    
+    .calc_button:active,
+    .calc_button_r:active {
+        transform: skew(-1deg,-1deg);
+    }
+}
+@media screen and (min-width: 1600px) {
+    .calc_button:hover,
+    .calc_button_r:hover {
+        transform: skew(0.4deg,0.4deg);
+    }
+    
+    .calc_button:active,
+    .calc_button_r:active {
+        transform: skew(-0.4deg,-0.4deg);
+    }
+}
+@media screen and (min-height: 600px) {
+    .calculator {
+        height: fit-content;
+    }
 }
