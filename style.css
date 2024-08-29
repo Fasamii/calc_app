@@ -71,7 +71,7 @@ body {
     background-color: #200d1165;
     color: #f0ffff;
     font-family: "Nanum Gothic Coding", monospace;
-    font-size: 2rem;
+    font-size: 2.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,8 @@ body {
     transform: skew(2deg,2deg);
     background-color: #00000056;
 }
-.calc_button:active {
+.calc_button:active,
+.calc_button_c:active {
     transform: skew(-2deg,-2deg);
 }
 .calc_button_r:active {
@@ -97,7 +98,7 @@ body {
     height: 80px;
     color: #f0ffff;
     font-family: "Nanum Gothic Coding", monospace;
-    font-size: 2rem;
+    font-size: 4rem;
     text-wrap: wrap;
     overflow-y: auto;
     word-break: break-all;
@@ -151,5 +152,18 @@ body {
 @media screen and (min-height: 600px) and (min-width: 800px) {
     .calculator {
         height: 60%;
+    }
+    #calc_panel {
+        font-size: 3rem;
+    } 
+    .calc_button,
+    .calc_button_r,
+    .calc_button_c {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-height: 840px) {
+    #calc_panel {
+        font-size: 2.4rem;
     }
 }
