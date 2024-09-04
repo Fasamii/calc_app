@@ -1,7 +1,7 @@
 import express from 'express';
 import fs from 'fs';
 
-const hostname = "192.168.1.13";
+const hostname = "";
 const port = 3000;
 const app = express();
 
